@@ -4,22 +4,18 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://omundy.github.io',
+	base: '/dig345-devlog',
 	integrations: [
 		starlight({
-			title: 'My Docs',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			title: 'DevLog',
+			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/omundy/dig345-devlog' }],
+			editLink: { baseUrl: 'https://omundy.github.io/dig345-devlog' },
 			sidebar: [
-				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
-					],
-				},
-				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
-				},
+				{ label: 'Schedule', autogenerate: { directory: 'schedule' }, },
+			],
+			customCss: [
+				'./src/styles/custom.css', // relative path to custom CSS file
 			],
 		}),
 	],
