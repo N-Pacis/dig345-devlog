@@ -2,15 +2,18 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
-// https://astro.build/config
+// Astro config docs https://astro.build/config
 export default defineConfig({
+	// required to publish on GH Pages
 	site: 'https://omundy.github.io',
 	base: '/dig345-devlog',
 	integrations: [
+		// Startlight-specific config
 		starlight({
-			title: 'DevLog',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/omundy/dig345-devlog' }],
-			editLink: { baseUrl: 'https://omundy.github.io/dig345-devlog' },
+			title: 'Owen\'s DevLog',
+			social: [{
+				icon: 'github', label: 'GitHub', href: 'https://github.com/omundy/dig345-devlog'
+			}],
 			sidebar: [
 				{ label: 'Schedule', autogenerate: { directory: 'schedule' }, },
 			],
