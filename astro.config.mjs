@@ -12,8 +12,11 @@ export default defineConfig({
 		starlight({
 			title: 'Pacis\'s DevLog',
 			sidebar: [
-				{ label: 'Schedule', autogenerate: { directory: 'schedule' }, },
+				{ label: 'Devlogs', autogenerate: { directory: 'devlogs' }, },
 			],
+			customCss: [
+				'./src/styles/custom.css'
+			]
 		}),
 	],
 });
