@@ -1,0 +1,40 @@
+---
+# Frontmatter section
+title: DevLog 2-3
+description: DevLog 2-3
+---
+
+# Pacis Nkubito: DEVLOG 2-3
+
+## Astro Blog
+
+import { Steps, Code, Tabs } from '@astrojs/starlight/components';
+
+This week I learned how to build a fully functional blog using Astro.js and React components.
+
+### Highlights
+
+<Steps>
+
+1. First, I installed Astro.js and set up a new project.
+
+   ```js
+   npm create astro@latest
+   ```
+
+2. Then I added a pages folder to display my individual pages.
+3. Next, I added a components folder to reuse some components such as the Navbar and Footer.
+
+4. Next I added a layouts folder to create a consistent layout for my pages.
+
+5. However, It was hard to override the layout styles such as for h1. But with the help of Astro's `:global` directive, I was able to override the styles.
+
+6. Next, I added dynamic page routing to display pages that match a given tag given by clicking a URL. I noticed this would be useful in getting a blog by id as well.
+
+7. I then integrated React to add hydrated pages in my project. I added a react component to display a custom greeting message that can change upon a button click.
+
+8. Next, I tried to copy https://igihe.com/, a famous Rwandan news website, by slightly modifying my project's CSS styles. 
+
+9. Finally, I deployed my project to Netlify and it is live at: https://pacis-astro-blog.netlify.app/
+
+</Steps>
