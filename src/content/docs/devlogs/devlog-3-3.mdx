@@ -1,0 +1,69 @@
+---
+# Frontmatter section
+title: DevLog 3-3
+description: DevLog 3-3
+---
+
+# Pacis Nkubito: DEVLOG 3-3
+
+## Full-Stack Application With Node and Express
+
+import { Steps, Code, Tabs } from '@astrojs/starlight/components';
+
+This week I learned how to build a full-stack applications using html, css, javascript on the frontend and Node.js with Express on the backend.
+
+### Highlights
+
+## Chapter 9 Summary
+
+Modern web browsers, have built-in tools to allow a better user experience and give ability for developers to debug their applications. However, these tools can be used for both the good and the bad. You might disable cookies to prevent tracking, but then you will have to type your password on every site you visit. Through this chapter we learn how to use these tools correctly and how to try and consider every user's privacy even though sometimes that might be hard. The final project of this chapter is a full-stack application that shows users a list of commonly used passwords to educate them on a simple mistake of chosing the wrong password.
+
+## Building the Bad Password Application
+
+<Steps>
+1. First, I forked the starter code at https://github.com/criticalwebdesign/bad-password-api-starter and then I cloned to my computer
+
+2. The I added a static api route to act as the main entry point to the backend:
+
+   ```js
+   router.get("/api", async function (req, res) {
+   res.send("Hello, World!");
+   });
+   ```
+
+3. Then, I added a dynamic api route, that returns a random password from a list everytime it is called:
+
+   ```js
+   router.get("/api/common", async function (req, res) {
+   res.send({ message: randomFromArray(data.common) });
+   });
+   ```
+
+4. Next, I added parameter handling to return a random password from a specific category:
+
+   ```js
+   router.get("/api/custom", async function (req, res) {
+   console.log(`params = ${req.query.params}`);
+   res.send({ message: returnPassword(req.query.params) });
+   });
+   ``` 
+
+5. Finally, I published my application to Vercel using the Vercel CLI and it is live: https://pacis-bad-password-api.vercel.app/
+
+</Steps>
+
+## Hacktivist deletes white supremacist websites live onstage during hacker conference
+
+A hacktivist known as Martha Root, deleted the servers of WhiteDate, WhiteChild, and WhiteDeal in real time at the end of a talk at the annual Chaos communication congress in Hamburg, Germany.
+
+Root said that prior to the attack they scraped WhiteDate's public data and found “poor cybersecurity hygiene that would make even your grandma's AOL account blush.” and that "users'images included precise geolocation metadata that practically hands out home addresses with a side of awkward selfies.”
+
+This made me understand that not following basic security practices can not only cost your website but also put your users at risk.
+
+One question I have is, how did Martha Root login to not only one but three different websites and the company's twitter account? 
+
+Finally, The meme below makes perfect sense because companies usually don't take security seriously until they are hacked.
+![Meme](../../../assets/devlog-3-3/security.png)
+
+## Reflection
+This week I learned in deep how to build a MERN (MongoDB, Express, React, Node.js) application. I also learned how to deploy a backend application to Vercel. To cap this off I tested my knowledge by building a bad-password-api that returns a ranom password from list of commonly used passwords. I followed this course's tutorial and also used https://www.w3schools.com/nodejs/nodejs_express.asp as a reference.
