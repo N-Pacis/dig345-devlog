@@ -21,3 +21,9 @@ main h6 { font-size: 1rem;}
   height: 360px;
   max-width: 100%;
 }
+
+.devlog-image {
+  width: 640px;
+  height: auto;
+  max-width: 100%;
+}
