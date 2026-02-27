@@ -4,6 +4,7 @@ description: DevLog 5-3
 ---
 
 import { Steps } from '@astrojs/starlight/components';
+import videoUrl from '../../../assets/devlog-5-3/video.mp4';
 
 # Pacis Nkubito: DEVLOG 5-3
 
@@ -74,10 +75,10 @@ I then hosted my project on Github Pages and it can be previewed [here](https://
 
 Below is a video demonstration of the above project as well:
 
-{/* <video controls width="100%" height="auto">
-    <source src="../../../assets/devlog-5-3/video.mp4" type="video/mp4" />
+<video class="devlog-video" controls width="640" height="360">
+    <source src={videoUrl} type="video/mp4" />
     Your browser does not support the video tag.
-</video> */}
+</video>
     
 ## Reading Response
 ### Music Mouse Explained | Laurie Spiegel on Algorithmic Composition | 1987 Archive | 27:38
